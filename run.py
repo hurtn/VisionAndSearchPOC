@@ -177,4 +177,5 @@ for snippet in snippets:
             print("Product could not be found ")
 
     else: #no match found keep track of the previous item
-        previous_snippet = snippet[1]        
+        if snippet[1].isupper(): # only keep track of the uppercase words to avoid false positives
+            previous_snippet = snippet[1]        
